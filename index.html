@@ -2,10 +2,534 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Conocimiento Agente Reporte Gerencia TI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="Base de conocimiento pública del Agente Reporte Gerencia TI v1.5">
+  <title>Knowledge Reporte Gerencia TI v1.5</title>
+  <style>
+    body {
+      max-width: 980px;
+      margin: 40px auto;
+      padding: 0 24px 60px;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.55;
+      color: #1f2328;
+      background: #ffffff;
+    }
+    h1, h2, h3 { color: #2f6f2f; }
+    h1 { border-bottom: 2px solid #70AD47; padding-bottom: 8px; }
+    h2 { margin-top: 34px; border-bottom: 1px solid #d8e8cf; padding-bottom: 5px; }
+    code {
+      background: #f3f4f6;
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+    pre {
+      background: #f6f8fa;
+      border: 1px solid #d0d7de;
+      padding: 14px;
+      overflow-x: auto;
+      white-space: pre-wrap;
+    }
+    blockquote {
+      margin-left: 0;
+      border-left: 4px solid #70AD47;
+      padding-left: 14px;
+      color: #4b5563;
+    }
+    hr { border: 0; border-top: 1px solid #d8dee4; margin: 28px 0; }
+    .tableline {
+      font-family: Consolas, monospace;
+      margin: 2px 0;
+      white-space: pre-wrap;
+    }
+  </style>
 </head>
 <body>
-  <h1>Conocimiento Agente Reporte Gerencia TI</h1>
-  <p>Prueba de publicación correcta en GitHub Pages.</p>
+<h1>KNOWLEDGE GPT — Reporte Gerencia TI</h1>
+<p><strong>Versión:</strong> 1.5</p>
+<p><strong>Tipo:</strong> referencia funcional, semántica y visual.</p>
+<p><strong>Prioridad:</strong> las instrucciones del GPT gobiernan el comportamiento. Este archivo explica cómo interpretar el dominio y los datos.</p>
+<blockquote>IMPORTANTE: los ejemplos de este archivo son ilustrativos. Nunca deben utilizarse como datos reales. La fuente de verdad de cada ejecución son exclusivamente los TXT subidos por el usuario.</blockquote>
+<hr>
+<h1>1. MODELO MENTAL DEL REPORTE</h1>
+<p>El agente convierte datos estructurados de Gestión TI en un informe ejecutivo estable.</p>
+<pre><code>TXT DEL PERÍODO
+      ↓
+VALIDACIÓN
+      ↓
+HECHOS DECLARADOS/CALCULADOS
+      ↓
+INFORME_FINAL_CANONICO
+      ├── respuesta
+      └── Word</code></pre>
+<p>La respuesta y el Word representan el mismo contenido.</p>
+<p>El objetivo no es narrar todo el TXT ni explicar la mecánica del análisis. El objetivo es mostrar información útil para Gerencia de forma compacta y verificable.</p>
+<hr>
+<h1>2. RECEPCIÓN POR LOTES</h1>
+<p>El usuario puede subir archivos en lotes de hasta 2.</p>
+<p>Ejemplo:</p>
+<pre><code>PDTI + EDA
+AEP + DYN
+SOPTI
+&quot;Listo, son todos&quot;</code></pre>
+<p>Antes de la confirmación final: acumular, verificar recepción y no analizar.</p>
+<p>Después de la confirmación: validar el conjunto completo y analizar todos los archivos juntos.</p>
+<p>No mezclar períodos salvo comparación solicitada.</p>
+<hr>
+<h1>3. EQUIPOS Y ORDEN OFICIAL</h1>
+<ol>
+<li>Equipo de Proyectos Desarrollo TI (<code>PDTI</code>)</li>
+<li>Equipo Desarrollo de Aplicaciones (<code>EDA</code>)</li>
+<li>Equipo Desarrollo AEP (<code>AEP</code>)</li>
+<li>DYNAMO (<code>DYN</code>)</li>
+<li>Equipo Soporte TI (<code>SOPTI</code>)</li>
+<li>Análisis de Tickets y Continuidad Operacional</li>
+<li>Cierre Ejecutivo</li>
+</ol>
+<p>La unidad de ejecución publicada es el EQUIPO.</p>
+<p>Los nombres de responsables individuales pueden utilizarse para validación interna, pero no se publican.</p>
+<hr>
+<h1>4. ESTRUCTURA HABITUAL DEL TXT</h1>
+<pre><code>{
+  &quot;reporte&quot;: {},
+  &quot;proyectos&quot;: [],
+  &quot;desarrollos&quot;: [],
+  &quot;actividades&quot;: [],
+  &quot;tickets&quot;: [],
+  &quot;sistemas&quot;: []
+}</code></pre>
+<p><code>reporte</code>: período, fecha de corte, equipo, código.</p>
+<p><code>proyectos</code>: iniciativas con seguimiento.</p>
+<p><code>desarrollos</code>: desarrollos/mejoras con seguimiento.</p>
+<p><code>actividades</code>: trabajo declarado en el período.</p>
+<p><code>tickets</code>: registros de ticketera.</p>
+<p><code>sistemas</code>: horas monitoreadas e incidencias.</p>
+<hr>
+<h1>5. DEFINICIÓN: porcentajeAvance</h1>
+<p><code>porcentajeAvance</code> = avance acumulado de la iniciativa.</p>
+<p>Válido:</p>
+<blockquote>La iniciativa registra 78% de avance acumulado.</blockquote>
+<p>No interpretar como avance realizado dentro del período.</p>
+<hr>
+<h1>6. DEFINICIÓN: avancePeriodo</h1>
+<p><code>avancePeriodo</code> es la principal fuente textual para describir qué cambió o qué se realizó durante el período.</p>
+<p>Puede reformularse para claridad sin agregar beneficios, impactos, riesgos, consecuencias ni valoraciones.</p>
+<p>Si está vacío, no concluir que no hubo trabajo.</p>
+<hr>
+<h1>7. REGLA: EVITAR REDUNDANCIA DE ESTADO</h1>
+<p>Las tablas ya comunican estado, etapa, avance y prioridad.</p>
+<p>La prosa debe concentrarse en MOVIMIENTO y HECHOS NUEVOS.</p>
+<h2>No publicar</h2>
+<blockquote>La iniciativa continúa En Proceso al corte.</blockquote>
+<blockquote>El desarrollo continúa En Proceso al corte.</blockquote>
+<blockquote>Registra estado Activo al corte.</blockquote>
+<blockquote>Las iniciativas continúan En Proceso al corte.</blockquote>
+<blockquote>A la fecha de corte permanece En Proceso.</blockquote>
+<p>Estas frases repiten una condición observable en la tabla y no aportan valor ejecutivo.</p>
+<h2>Publicar</h2>
+<blockquote>Durante el período se instaló y configuró el servidor; continúa la habilitación DNS declarada.</blockquote>
+<blockquote>Se incorporaron cinco servicios al formato de disponibilidad y se validó el registro manual de incidentes.</blockquote>
+<p>La tabla contiene la foto del estado. La narrativa explica el movimiento.</p>
+<hr>
+<h1>8. REGLA: FINALIZACIÓN</h1>
+<p>Una iniciativa se considera finalizada durante el período solo si <code>fechaFinReal</code> está dentro del período.</p>
+<p><code>fechaFinPlanificada</code> no permite declarar atraso, riesgo, incumplimiento ni finalización.</p>
+<p>No añadir aclaraciones como “al corte” para justificar que algo sigue abierto. El estado visible es suficiente.</p>
+<hr>
+<h1>9. REGLA: HITOS</h1>
+<p>Hito completado:</p>
+<ul>
+<li>estado <code>COMPLETADO</code>;</li>
+<li>fecha de finalización dentro del período.</li>
+</ul>
+<p>Hitos futuros:</p>
+<p><strong>Próximos hitos declarados</strong>.</p>
+<p>No tratarlos como compromisos garantizados.</p>
+<hr>
+<h1>10. REGLA: PRIORIDAD</h1>
+<p>Los cambios se obtienen de <code>historialPrioridad</code>.</p>
+<p>Publicar:</p>
+<ul>
+<li>iniciativa;</li>
+<li>anterior → nueva;</li>
+<li>motivo solo si está declarado.</li>
+</ul>
+<p>No interpretar automáticamente el cambio como riesgo o urgencia.</p>
+<hr>
+<h1>11. REGLA: ACTIVIDADES</h1>
+<p>Agrupar por:</p>
+<pre><code>sistema + tipo + título</code></pre>
+<p>Repetidos = contador.</p>
+<p>Sin sistema = <code>Otro</code>.</p>
+<p>La cantidad no representa productividad ni esfuerzo.</p>
+<hr>
+<h1>12. TICKETS: UNIVERSOS</h1>
+<h2>AEP</h2>
+<p>Los tickets AEP se muestran exclusivamente dentro de la sección AEP.</p>
+<p>Publicables:</p>
+<ul>
+<li>Considerados;</li>
+<li>Finalizados;</li>
+<li>En Proceso;</li>
+<li>% Finalizados;</li>
+<li>% En Proceso.</li>
+</ul>
+<h2>SOPTI</h2>
+<p>El análisis general de tickets usa exclusivamente SOPTI.</p>
+<p>Nunca consolidar AEP + SOPTI.</p>
+<hr>
+<h1>13. TICKETS: KPI</h1>
+<p>Participan:</p>
+<pre><code>baseAnalisisKPI = true</code></pre>
+<p>Finalizados:</p>
+<pre><code>CERRADO o RESUELTO</code></pre>
+<p>En Proceso:</p>
+<pre><code>cualquier otro estado válido para KPI</code></pre>
+<p>Cálculos:</p>
+<pre><code>% Finalizados = Finalizados / Considerados × 100
+% En Proceso = En Proceso / Considerados × 100</code></pre>
+<hr>
+<h1>14. TICKETS: DATOS INTERNOS</h1>
+<p>Normalmente NO publicar:</p>
+<ul>
+<li><code>baseAnalisisKPI</code>;</li>
+<li>cantidad/motivo de exclusiones;</li>
+<li>merges;</li>
+<li>antigüedad;</li>
+<li>metodología;</li>
+<li>notas técnicas;</li>
+<li>SLA;</li>
+<li>explicación de filtros.</li>
+</ul>
+<p>Estos datos sirven para cálculo/auditoría, no para el informe ejecutivo.</p>
+<p>Solo mostrarlos si el usuario solicita auditoría.</p>
+<hr>
+<h1>15. TOP 10 SOPORTE TI</h1>
+<p>Se generan:</p>
+<ol>
+<li>Top 10 Solicitantes.</li>
+<li>Top 10 Temas de Ayuda.</li>
+</ol>
+<p>Antes de ambos rankings excluir cualquier ticket si:</p>
+<pre><code>tema/categoría = NO CORRESPONDE SOPORTE
+OR correo = bhom_notificacion@bmc.com
+OR asunto/título contiene [!!Spam]</code></pre>
+<p>Comparación insensible a mayúsculas/minúsculas.</p>
+<p>Estos filtros afectan solo rankings, no KPI.</p>
+<h2>Top 10 Solicitantes</h2>
+<p>Agrupar por solicitante y ordenar descendente.</p>
+<p>Excluir integrantes TI identificables.</p>
+<h2>Top 10 Temas</h2>
+<p>Agrupar por tema/categoría y ordenar descendente.</p>
+<p><code>NO CORRESPONDE SOPORTE</code> nunca aparece.</p>
+<hr>
+<h1>16. DISPONIBILIDAD OPERACIONAL — REGLA VIGENTE</h1>
+<p>La versión ejecutiva NO muestra disponibilidad por sistema.</p>
+<p>La disponibilidad se comunica como UNA MÉTRICA GLOBAL del universo monitoreado.</p>
+<p>Calcular:</p>
+<pre><code>Uptime general =
+SUMA(horasUptime) / SUMA(horasPeriodo) × 100
+
+Downtime general =
+SUMA(horasDowntime) / SUMA(horasPeriodo) × 100</code></pre>
+<p>No promediar porcentajes individuales.</p>
+<p>Mostrar máximo 2 decimales.</p>
+<h2>Formato preferido</h2>
+<p class='tableline'>| Métrica | Resultado |</p>
+<p class='tableline'>|---|---:|</p>
+<p class='tableline'>| Uptime general | 99,58% |</p>
+<p class='tableline'>| Downtime general | 0,42% |</p>
+<p>También puede usarse una tabla horizontal compacta:</p>
+<p class='tableline'>| Uptime general | Downtime general |</p>
+<p class='tableline'>|---:|---:|</p>
+<p class='tableline'>| 99,58% | 0,42% |</p>
+<h2>No publicar</h2>
+<ul>
+<li>lista de todos los sistemas monitoreados;</li>
+<li>uptime individual por sistema;</li>
+<li>downtime individual por sistema;</li>
+<li>sistemas con 100% solo para demostrar que no tuvieron incidentes.</li>
+</ul>
+<p>La lectura ejecutiva debe responder:</p>
+<blockquote>¿Cuál fue la disponibilidad general?</blockquote>
+<p>Los sistemas se utilizan después únicamente para contextualizar incidencias.</p>
+<hr>
+<h1>17. INCIDENCIAS OPERACIONALES</h1>
+<p>Después de la disponibilidad general mostrar las incidencias.</p>
+<p>Agrupar por sistema SOLO cuando ese sistema tenga incidencias.</p>
+<p>Campos publicables cuando existan:</p>
+<ul>
+<li>fecha;</li>
+<li>duración;</li>
+<li>causa;</li>
+<li>impacto;</li>
+<li>estado de resolución.</li>
+</ul>
+<p>Ejemplo:</p>
+<pre><code>Red WAN
+26/08/2026 · 2,5 h
+Causa: Intermitencia de enlace del proveedor.
+Impacto: Conectividad degradada en terminal.
+Estado: Resuelto.</code></pre>
+<p>No mostrar un bloque para sistemas sin incidencias.</p>
+<p>No inventar campos vacíos.</p>
+<p>Lógica ejecutiva:</p>
+<pre><code>DISPONIBILIDAD GLOBAL
+      ↓
+INCIDENCIAS
+      ├── Sistema A
+      ├── Sistema B
+      └── Sistema C</code></pre>
+<hr>
+<h1>18. SECCIÓN FINAL CANÓNICA</h1>
+<h2>KPI Tickets Soporte TI</h2>
+<ul>
+<li>Considerados</li>
+<li>Finalizados</li>
+<li>En Proceso</li>
+<li>% Finalizados</li>
+<li>% En Proceso</li>
+</ul>
+<h2>Top 10 Solicitantes</h2>
+<h2>Top 10 Temas de Ayuda</h2>
+<h2>Disponibilidad Operacional</h2>
+<ul>
+<li>Uptime general</li>
+<li>Downtime general</li>
+</ul>
+<h2>Incidencias Operacionales</h2>
+<ul>
+<li>agrupadas por sistema con incidencia</li>
+</ul>
+<p>No intercalar metodología, exclusiones, antigüedad ni explicaciones internas.</p>
+<hr>
+<h1>19. ESTILO DE REDACCIÓN EJECUTIVA</h1>
+<p>Prioridad:</p>
+<pre><code>HECHO NUEVO &gt; CAMBIO &gt; RESULTADO &gt; CONTEXTO</code></pre>
+<p>Evitar texto que solo repita estado, fecha de corte, reglas de cálculo, condiciones obvias o información visible en la tabla.</p>
+<h2>Poco eficiente</h2>
+<blockquote>Proxy Reverso Seaport registra 92% de avance acumulado y continúa En Proceso al corte.</blockquote>
+<h2>Preferido</h2>
+<blockquote>Durante el período se instaló y configuró el servidor; continúa la habilitación DNS declarada.</blockquote>
+<p>Si el 92% ya aparece en la tabla, no es obligatorio repetirlo en el párrafo.</p>
+<p>La tabla contiene la foto del estado. La narrativa explica el movimiento.</p>
+<hr>
+<h1>20. CONCLUSIONES</h1>
+<p>Publicar solo hechos declarados, calculados o comparados.</p>
+<p>Adecuado:</p>
+<blockquote>Durante el período finalizaron cuatro desarrollos.</blockquote>
+<blockquote>Se completaron diez hitos.</blockquote>
+<blockquote>Soporte TI registró 12 tickets considerados: 8 Finalizados y 4 En Proceso.</blockquote>
+<blockquote>La disponibilidad operacional general fue 99,58% de uptime y 0,42% de downtime.</blockquote>
+<blockquote>Se declararon tres incidencias operacionales.</blockquote>
+<p>No afirmar sin evidencia:</p>
+<ul>
+<li>buen/mal desempeño;</li>
+<li>productividad;</li>
+<li>sobrecarga;</li>
+<li>atraso;</li>
+<li>problema;</li>
+<li>eficiencia;</li>
+<li>ahorro;</li>
+<li>criticidad;</li>
+<li>cuello de botella.</li>
+</ul>
+<hr>
+<h1>21. INFORME_FINAL_CANONICO</h1>
+<p>El agente crea un único contenido maestro interno.</p>
+<p>Una vez validado:</p>
+<ul>
+<li>no volver a resumir;</li>
+<li>no reanalizar;</li>
+<li>no recalcular;</li>
+<li>no cambiar selección de hechos.</li>
+</ul>
+<p>La respuesta es su representación textual.</p>
+<p>El Word es su representación documental.</p>
+<hr>
+<h1>22. WORD Y CAPACIDAD DE ARCHIVOS</h1>
+<p>El Knowledge no puede habilitar herramientas.</p>
+<p>Cuando el GPT tenga una capacidad de ejecución/generación de archivos disponible, debe utilizarla para crear el <code>.docx</code> si el usuario pidió el informe.</p>
+<p>El Word:</p>
+<ul>
+<li>publica el INFORME_FINAL_CANONICO;</li>
+<li>no realiza un segundo análisis;</li>
+<li>no omite contenido;</li>
+<li>no añade conclusiones.</li>
+</ul>
+<p>Si la capacidad no está habilitada, el GPT debe decirlo brevemente y no inventar enlaces.</p>
+<p>Para un GPT destinado a producir documentos, habilitar una capacidad de ejecución de código/análisis de datos o una herramienta equivalente de creación de archivos.</p>
+<hr>
+<h1>23. CONTRATO VISUAL MARVAL</h1>
+<p>Mantener el formato actualmente validado.</p>
+<h2>Página</h2>
+<ul>
+<li>Carta/Letter;</li>
+<li>vertical;</li>
+<li>márgenes aprox. 1,27 cm;</li>
+<li>fondo blanco;</li>
+<li>sin pie ni numeración salvo solicitud.</li>
+</ul>
+<h2>Tipografía</h2>
+<ul>
+<li>Calibri;</li>
+<li>texto base 8 pt;</li>
+<li>títulos compactos;</li>
+<li>verde corporativo <code>#70AD47</code>;</li>
+<li>texto negro.</li>
+</ul>
+<h2>Identidad</h2>
+<ul>
+<li>logo MARVAL arriba a la derecha cuando exista;</li>
+<li>secciones principales en verde;</li>
+<li>línea horizontal verde;</li>
+<li>tablas compactas;</li>
+<li>alta densidad informativa.</li>
+</ul>
+<h2>No usar</h2>
+<ul>
+<li>dashboard;</li>
+<li>tarjetas grandes;</li>
+<li>sombras;</li>
+<li>degradados;</li>
+<li>fondos decorativos;</li>
+<li>WordArt;</li>
+<li>rediseños por período.</li>
+</ul>
+<hr>
+<h1>24. TABLAS</h1>
+<p>Las tablas deben concentrar datos observables.</p>
+<p>Proyectos/Desarrollos:</p>
+<ul>
+<li>iniciativa;</li>
+<li>estado/etapa;</li>
+<li>avance acumulado;</li>
+<li>prioridad;</li>
+<li>avance del período cuando convenga.</li>
+</ul>
+<p>Actividades:</p>
+<ul>
+<li>sistema;</li>
+<li>tipo;</li>
+<li>actividad;</li>
+<li>cantidad.</li>
+</ul>
+<p>Tickets:</p>
+<ul>
+<li>indicador;</li>
+<li>resultado.</li>
+</ul>
+<p>Disponibilidad:</p>
+<ul>
+<li>Uptime general;</li>
+<li>Downtime general.</li>
+</ul>
+<p>Si una tabla ya contiene un dato, evitar repetirlo inmediatamente en una oración salvo que la narración agregue información nueva.</p>
+<hr>
+<h1>25. APROVECHAMIENTO DEL ESPACIO</h1>
+<p>El documento es <strong>COMPACTO, NO RESUMIDO</strong>.</p>
+<ul>
+<li>flujo de arriba hacia abajo;</li>
+<li>pocos espacios vacíos;</li>
+<li>sin página obligatoria por equipo;</li>
+<li>continuar siguiente equipo cuando exista espacio;</li>
+<li>tablas y bloques con altura dinámica;</li>
+<li>agregar páginas cuando sea necesario.</li>
+</ul>
+<p>Prioridad:</p>
+<pre><code>FIDELIDAD
+&gt; LEGIBILIDAD
+&gt; PERSISTENCIA VISUAL
+&gt; CANTIDAD DE PÁGINAS</code></pre>
+<hr>
+<h1>26. REGLAS DE SALTO</h1>
+<ul>
+<li>título unido al primer contenido;</li>
+<li>evitar títulos huérfanos;</li>
+<li>permitir continuidad natural entre páginas;</li>
+<li>no insertar saltos solo para que un equipo comience arriba;</li>
+<li>no reducir texto por debajo del mínimo visual para hacer caber contenido.</li>
+</ul>
+<hr>
+<h1>27. SECCIONES SIN DATOS</h1>
+<p>No inventar contenido.</p>
+<p>Si una sección obligatoria requiere indicación:</p>
+<blockquote>No se declararon elementos para esta sección durante el período.</blockquote>
+<p>Usar esta frase solo cuando sea necesaria para mantener claridad estructural. No llenar el documento con aclaraciones de ausencia si omitir el bloque es más limpio y no genera ambigüedad.</p>
+<hr>
+<h1>28. AUDITORÍA</h1>
+<p>La auditoría es una salida distinta del informe ejecutivo.</p>
+<p>Solo si el usuario la pide pueden mostrarse:</p>
+<ul>
+<li>exclusiones;</li>
+<li>base KPI;</li>
+<li>merges;</li>
+<li>antigüedad;</li>
+<li>reglas;</li>
+<li>cálculos;</li>
+<li>evidencia.</li>
+</ul>
+<p>No mezclar auditoría con el reporte gerencial.</p>
+<hr>
+<h1>29. CHECKLIST DE CONTENIDO</h1>
+<h2>Recepción</h2>
+<ul>
+<li>carga confirmada;</li>
+<li>todos los archivos incluidos;</li>
+<li>períodos no mezclados.</li>
+</ul>
+<h2>Datos</h2>
+<ul>
+<li>cantidades y porcentajes correctos;</li>
+<li>finalizaciones/hitos/prioridades válidos;</li>
+<li>AEP y SOPTI separados;</li>
+<li>rankings filtrados;</li>
+<li>disponibilidad global correctamente ponderada.</li>
+</ul>
+<h2>Redacción</h2>
+<ul>
+<li>no responsables individuales;</li>
+<li>no mecánica interna;</li>
+<li>no inferencias;</li>
+<li>no frases redundantes de “En Proceso al corte”;</li>
+<li>narrativa centrada en movimiento.</li>
+</ul>
+<h2>Continuidad</h2>
+<ul>
+<li>no tabla de disponibilidad por sistema;</li>
+<li>Uptime general;</li>
+<li>Downtime general;</li>
+<li>sistemas solo donde existan incidencias.</li>
+</ul>
+<h2>Word</h2>
+<ul>
+<li>mismo contenido que respuesta;</li>
+<li>misma estructura;</li>
+<li>mismo formato MARVAL;</li>
+<li>no resumen secundario.</li>
+</ul>
+<hr>
+<h1>30. PRINCIPIOS DE RECUPERACIÓN</h1>
+<p>Cuando el GPT necesite decidir:</p>
+<p><strong>¿Qué significa un campo?</strong> → secciones 4–10.</p>
+<p><strong>¿Cómo tratar tickets?</strong> → secciones 12–15.</p>
+<p><strong>¿Cómo tratar disponibilidad?</strong> → secciones 16–17.</p>
+<p><strong>¿Qué mostrar al final?</strong> → sección 18.</p>
+<p><strong>¿Cómo redactar sin redundancia?</strong> → sección 19.</p>
+<p><strong>¿Cómo generar Word?</strong> → secciones 21–23.</p>
+<p><strong>¿Cómo maquetar?</strong> → secciones 23–26.</p>
+<p>Principios permanentes:</p>
+<ol>
+<li>TXT = hechos.</li>
+<li>Knowledge = semántica y formato, no datos actuales.</li>
+<li>Equipo = unidad de análisis.</li>
+<li>Movimiento &gt; repetición de estado.</li>
+<li>Disponibilidad = métrica global.</li>
+<li>Sistemas = contexto de incidencias.</li>
+<li>Auditoría interna ≠ informe ejecutivo.</li>
+<li>Respuesta = Word en contenido.</li>
+<li>Ante duda, omitir antes que inferir.</li>
+</ol>
 </body>
 </html>
